@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ALGO-WIZ{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/visualization.css') }}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">ALGO-WIZ</a>
+            <div class="nav-links">
+                <a href="/visualization/sorting">Sorting</a>
+                <a href="/visualization/searching">Searching</a>
+                <a href="/visualization/linkedlist">Linked List</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 ALGO-WIZ - Algorithm Visualization Tool</p>
+    </footer>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html> 

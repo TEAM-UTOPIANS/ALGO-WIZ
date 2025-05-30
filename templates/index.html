@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+
+{% block title %}ALGO-WIZ - Interactive Algorithm Visualization Tool{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to ALGO-WIZ</h1>
+        <p class="hero-subtitle">Master Algorithms Through Interactive Visualization</p>
+        <p class="hero-description">
+            An educational tool designed to help students and developers understand complex algorithms 
+            through step-by-step visualization, performance analysis, and interactive learning.
+        </p>
+        <div class="hero-buttons">
+            <a href="/visualization/sorting" class="btn btn-primary">Get Started</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<section id="features" class="features-section">
+    <h2 class="section-title">Why Choose ALGO-WIZ?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Interactive Visualization</h3>
+            <p>Watch algorithms in action with step-by-step animation and real-time data manipulation.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Performance Metrics</h3>
+            <p>Understand algorithm efficiency with detailed statistics and complexity analysis.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Custom Input</h3>
+            <p>Test algorithms with your own data sets and see how they perform.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Step Control</h3>
+            <p>Control the visualization speed and step through each phase of the algorithm.</p>
+        </div>
+    </div>
+</section>
+
+<section class="algorithms-section">
+    <h2 class="section-title">Explore Algorithms</h2>
+    <div class="algorithm-categories">
+        <div class="category-card">
+            <div class="category-icon">🔄</div>
+            <h3>Sorting Algorithms</h3>
+            <p>Visualize and understand how different sorting algorithms work with arrays.</p>
+            <ul class="algorithm-list">
+                <li>Bubble Sort</li>
+                <li>Quick Sort</li>
+                <li>Merge Sort</li>
+                <li>Selection Sort</li>
+                <li>Insertion Sort</li>
+                <li>Heap Sort</li>
+            </ul>
+            <a href="/visualization/sorting" class="btn btn-outline">Start Sorting</a>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🔍</div>
+            <h3>Searching Algorithms</h3>
+            <p>Learn how different searching techniques efficiently find elements in data structures.</p>
+            <ul class="algorithm-list">
+                <li>Binary Search</li>
+                <li>Linear Search</li>
+                <li>Jump Search</li>
+                <li>Exponential Search</li>
+            </ul>
+            <a href="/visualization/searching" class="btn btn-outline">Start Searching</a>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🔗</div>
+            <h3>Linked List</h3>
+            <p>Discover how linked lists (singly, doubly, circular) are traversed, inserted, and deleted.</p>
+            <ul class="algorithm-list">
+                <li>Singly Linked List</li>
+                <li>Doubly Linked List</li>
+                <li>Circular Linked List</li>
+            </ul>
+            <a href="/visualization/linkedlist" class="btn btn-outline">Start Linked List</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>Ready to Master Algorithms?</h2>
+        <p>Start your journey to better understanding algorithms through interactive visualization.</p>
+        <a href="/visualization/sorting" class="btn btn-primary btn-large">Get Started Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_head %}
+<style>
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(135deg, #1976d2, #0d47a1);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+
+    .hero-description {
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        opacity: 0.8;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* Features Section */
+    .features-section {
+        padding: 60px 20px;
+        background-color: #f8f9fa;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.2em;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    /* Algorithm Categories */
+    .algorithms-section {
+        padding: 60px 20px;
+    }
+
+    .algorithm-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .category-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .category-icon {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .category-card h3 {
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .algorithm-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .algorithm-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        color: #666;
+    }
+
+    .algorithm-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        background: linear-gradient(135deg, #2196f3, #1976d2);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .cta-content h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+
+    .cta-content p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #2196f3;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #1976d2;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background-color: rgba(255,255,255,0.2);
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background-color: rgba(255,255,255,0.3);
+        transform: translateY(-2px);
+    }
+
+    .btn-outline {
+        border: 2px solid #2196f3;
+        color: #2196f3;
+        background: transparent;
+        margin-top: 20px;
+    }
+
+    .btn-outline:hover {
+        background-color: #2196f3;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .btn-large {
+        padding: 16px 32px;
+        font-size: 1.2em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero-content h1 {
+            font-size: 2.5em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .algorithm-categories {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %} 
